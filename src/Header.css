@@ -1,0 +1,183 @@
+.header {
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__hamMenu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 18px;
+  object-fit: contain;
+}
+
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  /* margin: 0 20px; */
+  margin-left: 8px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.header__searchContainer {
+  display: flex;
+  flex-direction: row;
+  object-fit: contain;
+  flex: 1;
+  margin-top: -10px; /* have to fix this later */
+}
+
+.header__dropdownSearch {
+  background-color: #f3f3f3;
+  border: 1px solid #cdcdcd;
+  /* height: 22px !important; */
+  width: 100px;
+  /* padding: 10px; */
+  /* border-left: 1px solid #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+  border-radius: 4px 0 0 4px; */
+  /* padding: 0px; */
+}
+
+.header__select {
+  color: #555;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+
+  /* line-height: 33px; */
+  /* margin-right: 21px;
+  margin-left: 5px; */
+  /* min-width: 29px; */
+}
+
+/* .header__menuitem {
+  width: 100%;
+} */
+
+.header__searchInput {
+  height: 15px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header__searchIcon {
+  padding: 7px;
+  height: 22px !important; /* it will ignore material css style and takes our style */
+  background-color: #cd9042;
+}
+
+/* .sprite {
+	background: url('imgs/amazon.PNG') no-repeat -235px -259px;
+	width: 20px;
+	height: 18px;
+} */
+
+.header__nav__right {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 12px;
+}
+
+.header__link {
+  color: white;
+  text-decoration: none;
+}
+
+.header__option {
+  /* height: 5vh; */
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+.header__optionBasket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.header__basketCount {
+  color: #cd9042;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header__basketIcon {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.header__optionBasketText {
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.header__bottom-nav {
+  background-color: #232f3e;
+}
+/*  
+rgb(35,47,62)
+#232F3E
+*/
+
+.header__bottom-nav {
+  display: flex;
+  align-items: center;
+  object-fit: contain;
+  position: relative;
+}
+
+.header__address-icon {
+  object-fit: contain;
+}
+
+.header__option-bottom {
+  display: flex;
+  flex-direction: row;
+  object-fit: contain;
+  margin-left: 40px;
+  padding: 10px;
+  flex: 1;
+}
+
+.header__optionLineBottom {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.header__bottom-nav-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.header__bottom-nav-text:hover {
+  border: 2px solid #eee5d9;
+}
+
+.header__bottom-nav-text > span {
+  /* margin-left: 10px; */
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 700;
+  padding: 5px 8px 6px 8px;
+}
