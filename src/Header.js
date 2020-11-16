@@ -74,15 +74,7 @@ function Header() {
               </div>
             </Link>
 
-            {/* 3rd Link */}
-            {/* <Link to="/" className="header__link">
-              <div className="header__option">
-                <span className="header__optionLineOne">Your</span>
-                <span className="header__optionLineTwo">Prime</span>
-              </div>
-            </Link> */}
-
-            {/* 4th Link , basket icon with number on it*/}
+            {/* 3rd Link , basket icon with number on it*/}
             <Link to="/checkout" className="header__link">
               <div className="header__optionBasket">
                 <span className="header__basketCount">{basket?.length}</span>
@@ -100,6 +92,7 @@ function Header() {
           </div>
         </nav>
       </div>
+      {/* second bottom navigation bar */}
       <div className="header__bottomNavbar">
         <nav className="header__bottom-nav">
           <Link to="/" className="header__link">
@@ -113,7 +106,7 @@ function Header() {
               <span className="header__optionLineTwo">Välj din Adress</span>
             </div>
           </Link>
-          <Link to="/" className="header__link">
+          <Link to="/" className="header__link middle-menu">
             <div className="header__option-bottom">
               <span className="header__optionLineBottom">Bästsäljare</span>
               <span className="header__optionLineBottom">Erbjudande</span>
@@ -122,7 +115,7 @@ function Header() {
               <span className="header__optionLineBottom">Presentkort</span>
             </div>
           </Link>
-          <Link to="/" className="header__link">
+          <Link to="/" className="header__link right-CovidText">
             <div className="header__bottom-nav-text">
               <span className="">Amazon's response to COVID-19</span>
             </div>

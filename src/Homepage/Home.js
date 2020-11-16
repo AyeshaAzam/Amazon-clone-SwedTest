@@ -6,11 +6,13 @@ import Category from "../Categories/Category";
 function Home() {
   return (
     <div className="home">
-      <img
-        className="home__image"
-        src="https://images-eu.ssl-images-amazon.com/images/G/46/DancingQueen/Gateway/Hero/SE_DesktopHero_Template_1500x600._CB419092580_.jpg"
-        alt="home-logo"
-      />
+      <div className="home__image">
+        {/* <img
+          className="home__image"
+          src="https://images-eu.ssl-images-amazon.com/images/G/46/DancingQueen/Gateway/Hero/SE_DesktopHero_Template_1500x600._CB419092580_.jpg"
+          alt="home-logo"
+        /> */}
+      </div>
 
       {/* product id, title, price, rating, images */}
       <div className="home__row">

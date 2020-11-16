@@ -12,8 +12,20 @@
 }
 
 .home__image {
+  background-image: url(https://images-eu.ssl-images-amazon.com/images/G/46/DancingQueen/Gateway/Hero/SE_DesktopHero_Template_1500x600._CB419092580_.jpg);
+  height: 600px;
   width: 100%;
+  /* height: fit-content;
+  object-fit: cover; */
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   z-index: -1; /* if anything infront of it then I want the home banner image to go bahind that  */
-  margin-bottom: -280px; /* pulls the product up   */
+  margin-bottom: -330px; /* pulls the products component up   */
+}
+
+/* responsive design*/
+/*  If I am below 768px then implement the below rules */
+@media (max-width: 768px) {
+  .home__image {
+    background-position: -180px; /* by default it is 'top left /left-top' of the amazon image, starts always from left and top ( x and y axis) , the image will move to left side*/
+  }
 }
