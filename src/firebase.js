@@ -19,3 +19,4 @@ const auth = firebase.auth();
 export { auth, db };
 
 // so now we connected firebase with react front-end
+// also run the 'npm i firebase'

@@ -4,12 +4,24 @@ export const initialState = {
   user: null,
 };
 
+// for subtotal
+//Selector
+export const getBasketTotal = (basket) => {
+  return basket?.reduce((amount, item) => item.price + amount, 0); //initial amount is Zero
+};
+
 //ACTION--> can be like, add item in the basket
 // or remove item from the basket... and so on
 const reducer = (state, action) => {
   //console.log("state + action", state, action);
 
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
+
     case "ADD_TO_BASKET":
       //login for adding item to basket
       //Return whatever the state currently was , and also return the basket with new item in it
@@ -24,12 +36,11 @@ const reducer = (state, action) => {
     //     basket: [],
     //   };
 
+    //logic for removing item from basket
+    //go and find the index of the basket,
+    // so go and check all of the basket item in the basket
+    //and check if that id matches the action.id
     case "REMOVE_FROM_BASKET":
-      //logic for removing item from basket
-
-      //go and find the index of the basket,
-      // so go and check all of the basket item in the basket
-      //and check if that id matches the action.id
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );

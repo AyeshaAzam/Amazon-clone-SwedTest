@@ -97,6 +97,7 @@
 
 .right-CovidText {
   width: 227px;
+  min-width: 227px; /* you can not be less then this width  */
 }
 
 .header__option {
@@ -140,9 +141,6 @@
   margin-top: 15px;
 }
 
-.header__bottom-nav {
-  background-color: #232f3e;
-}
 /*  
 rgb(35,47,62)
 #232F3E
@@ -153,6 +151,7 @@ rgb(35,47,62)
   align-items: center;
   object-fit: contain;
   position: relative;
+  background-color: #232f3e;
 }
 
 .header__address-icon {
@@ -190,4 +189,18 @@ rgb(35,47,62)
   line-height: 15px;
   font-weight: 700;
   padding: 5px 8px 6px 8px;
+}
+
+@media (max-width: 768px) {
+  .right-CovidText {
+    flex-shrink: 0; /* don't shrink , when the max-width is 768*/
+  }
+
+  .header__option-bottom {
+    margin-left: 40px;
+  }
+
+  .header__option {
+    margin-right: 0px;
+  }
 }

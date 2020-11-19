@@ -3,10 +3,11 @@
   flex-direction: column;
   background-color: white;
   max-height: 400px;
-  min-width: 100px;
+  height: 400px;
+  min-width: 210px;
   width: 100%;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 10px;
   padding: 20px;
   z-index: 1;
@@ -44,4 +45,13 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+}
+
+/* responsive design*/
+/*  If I am below 768px then implement the below rules */
+@media (max-width: 768px) {
+  .product {
+    width: 40%;
+    min-width: 40%;
+  }
 }

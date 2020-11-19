@@ -20,7 +20,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
     //     id: id,
     //   },
     // });
-    // the above dispatch({...}) code won't work to remove the item from BAsket
+    // the above dispatch({...}) code isn't working to remove the item from BAsket
     dispatch({
       type: "REMOVE_FROM_BASKET",
       id: id,

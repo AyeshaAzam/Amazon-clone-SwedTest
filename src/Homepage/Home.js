@@ -18,32 +18,32 @@ function Home() {
       <div className="home__row">
         {/* 3 Products  plus 1 login in box*/}
         <Product
-          id="1212"
+          id="121212"
           title="Electronic Mixture"
           price={12.29}
           rating={5}
           image="https://images-na.ssl-images-amazon.com/images/I/61KT0DrSWJL._AC_SL1100_.jpg"
         />
         <Product
-          id="13679880"
+          id="136799"
           title="Soft Skills: The Software Developer's Life Manual Ebook | READ ONLINE"
           price={9.9}
           rating={5}
           image="https://images-na.ssl-images-amazon.com/images/I/51WiLueukSL._SX396_BO1,204,203,200_.jpg"
         />
         <Product
-          id="12321341"
-          title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-          price={129.99}
-          image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
-          rating={5}
+          id="495380"
+          title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+          price={239.0}
+          rating={4}
+          image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
         />
         <Product
-          id="12321341"
-          title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-          price={129.99}
-          image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+          id="234459"
+          title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
+          price={98.99}
           rating={5}
+          image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
         />
       </div>
       <div className="home__row">
@@ -72,7 +72,7 @@ function Home() {
       <div className="home__row">
         {/* 1 big row with lots of  Products */}
         <Product
-          id="123212345"
+          id="123212"
           title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
           price={129.99}
           image="https://m.media-amazon.com/images/I/61Hh-0F7AbL._AC_UY218_.jpg"
@@ -83,18 +83,18 @@ function Home() {
       <div className="home__row">
         {/* 2 Products */}
         <Product
-          id="1232134189"
-          title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-          price={129.99}
-          image="https://m.media-amazon.com/images/I/61Hh-0F7AbL._AC_UY218_.jpg"
-          rating={5}
+          id="325435"
+          title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
+          price={29.99}
+          rating={4}
+          image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
         />
         <Product
-          id="1232134167"
+          id="123213"
           title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-          price={129.99}
+          price={19.99}
+          rating={3}
           image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
-          rating={5}
         />
       </div>
     </div>

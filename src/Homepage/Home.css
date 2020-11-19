@@ -28,4 +28,9 @@
   .home__image {
     background-position: -180px; /* by default it is 'top left /left-top' of the amazon image, starts always from left and top ( x and y axis) , the image will move to left side*/
   }
+
+  .home__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

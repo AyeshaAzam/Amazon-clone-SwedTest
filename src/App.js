@@ -1,11 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Homepage/Home";
 import Checkout from "./Checkout/Checkout";
+import Login from "./Login/Login";
+import { auth } from "./firebase";
+import { useStateValue } from "./DataLayer/StateProvider";
 
 function App() {
+  const [{ user }, dispatch] = useStateValue();
+
+  //useEffect <<<<<<<< POWERFUL
+  //Piece of code which runs based on a given condition
+  useEffect(() => {
+    // is a listener when user login or logouts
+    const unsubcribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        //the user is logged in.... then we push the user in datalayer
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        //the user logged out....then we set him to null
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+
+    //we it reders again or refreshes then we need to do clean up operations
+    // so if this App() component re-renders for any reasons then
+    //it will de-attached it and then re-attached it again with new listener
+
+    return () => {
+      unsubcribe();
+    };
+  }, []);
+
+  console.log("THE USER IS >>>>>> ", user);
+
   return (
     <Router>
       <div className="app">
@@ -16,7 +52,7 @@ function App() {
             <Checkout />
           </Route>
           <Route path="/login">
-            <h1>Login Page</h1>
+            <Login />
           </Route>
           {/* This is the default route, at the end */}
           <Route path="/">

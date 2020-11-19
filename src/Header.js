@@ -9,15 +9,22 @@ import MenuItem from "@material-ui/core/MenuItem";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 import { useStateValue } from "../src/DataLayer/StateProvider";
+import { auth } from "./firebase";
 
 function Header() {
   // pulling the basket from reducer
   // first parameter gives us the state of the datalayer
   //const [state, dispatch] = useStateValue();
   //state.basket = []
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
-  console.log("basket", basket);
+  //console.log("basket", basket);
+  const login = () => {
+    //if the user is sign-in then show sign-out
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <div className="headerNavs">
@@ -59,10 +66,15 @@ function Header() {
           {/* 4 Links */}
           <div className="header__nav__right">
             {/* 2st Link */}
-            <Link to="/login" className="header__link">
-              <div className="header__option">
-                <span className="header__optionLineOne">Hej, logga in</span>
-                <span className="header__optionLineTwo">Konto & listor </span>
+            {/* link to login only going to show if the user is not LOG IN, so login page will show if the user is not login yet */}
+            <Link to={!user && "/login"} className="header__link">
+              <div onClick={login} className="header__option">
+                <span className="header__optionLineOne">
+                  Hej, {user?.email}
+                </span>
+                <span className="header__optionLineTwo">
+                  {user ? "Sign Out" : "Sign In"}
+                </span>
               </div>
             </Link>
 
