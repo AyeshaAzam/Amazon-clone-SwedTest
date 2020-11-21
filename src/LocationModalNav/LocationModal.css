@@ -1,0 +1,32 @@
+/* .locationModal {
+  background-color: rgb(16, 241, 24);
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .locationModal__container {
+  width: 500px;
+  height: 100px;
+  background: #fff;
+  color: rgb(238, 14, 14);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.locationModal__modal {
+  width: 800px;
+  height: 400px;
+  background-color: lightskyblue;
+}
+
+.locationModa__btn {
+  background-color: #141414;
+  color: white;
+} */

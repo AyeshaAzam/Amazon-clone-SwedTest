@@ -204,3 +204,64 @@ rgb(35,47,62)
     margin-right: 0px;
   }
 }
+
+/*  Address Modal in Header.js style */
+
+.header__modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__modal {
+  background-color: #d5d9d9; /* #f0f2f2*/
+  border-radius: 3px;
+  padding: 20px;
+  margin: 0px;
+  border-bottom: 1px solid #f0f2f2;
+}
+
+.header__modalInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header__modalInfo input {
+  /* margin-left: 5px; */
+  margin: 5px;
+  background-color: #fff;
+  width: 37%;
+  height: 25px;
+  padding: 3px 5px;
+  line-height: normal;
+  border: 1px solid #888c8c;
+  border-radius: 3px;
+}
+
+.header__modalText {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.header__modalBtn {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+}
+
+.header__modal-bottom-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.header__modal-bottom-btn button {
+  margin-left: 10px;
+  margin-right: 10px;
+}

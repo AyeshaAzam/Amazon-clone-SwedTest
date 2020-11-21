@@ -7,6 +7,8 @@ import Checkout from "./Checkout/Checkout";
 import Login from "./Login/Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./DataLayer/StateProvider";
+import Payment from "./Payment/Payment";
+import LocationModal from "./LocationModalNav/LocationModal";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -53,6 +55,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/payment">
+            <Payment />
           </Route>
           {/* This is the default route, at the end */}
           <Route path="/">
