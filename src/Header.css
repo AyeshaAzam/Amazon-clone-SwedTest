@@ -213,6 +213,19 @@ rgb(35,47,62)
   justify-content: center;
 }
 
+/*  Try this for the header style:
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+*/
+
 .header__modal {
   background-color: #d5d9d9; /* #f0f2f2*/
   border-radius: 3px;

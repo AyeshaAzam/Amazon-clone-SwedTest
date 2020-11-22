@@ -50,7 +50,8 @@ function Header() {
 
   //for Modal
   const [open, setOpen] = useState(false);
-  const [input, setInput] = useState("");
+  const [inputCity, setInputCity] = useState("");
+  const [inputZipcode, setinputZipcode] = useState("");
   const [error, setError] = useState("");
 
   const classes = useStyles();
@@ -76,27 +77,29 @@ function Header() {
     setOpen(true);
   };
 
-  
+  //https://www.youtube.com/watch?v=FM2RN8rHCTE
   const handleValidation = () => {
     let error = "";
 
-    if (!input) {
-      error = "Input field cannot be Blank";
+    if (!inputCity || !inputZipcode) {
+      error = "Insert a Valid zipcode in Sweden";
     }
 
     if (error) {
-      setInput({ error: error });
+      setError(error);
       return false;
+    } else {
+      setError("");
     }
-
-    return true;
+    setInputCity("");
+    setinputZipcode("");
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const isValid = handleValidation();
     if (isValid) {
-      console.log(input);
+      console.log(`log is : ${inputCity} --  ${inputZipcode}`);
     }
   };
 
@@ -121,16 +124,18 @@ function Header() {
             <form onSubmit={handleSubmit}>
               <div className="header__modalInfo">
                 <input
-                  type="text"
+                  type="number"
+                  placeholder="CityCode"
                   name="city"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  value={inputCity}
+                  onChange={(e) => setInputCity(e.target.value)}
                 />
                 <input
-                  type="text"
+                  type="number"
                   name="zipCode"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="zipCode"
+                  value={inputZipcode}
+                  onChange={(e) => setinputZipcode(e.target.value)}
                 />
               </div>
               <div className="header__modal-bottom-btn">
@@ -138,10 +143,12 @@ function Header() {
                   <button type="submit">Tillämpa</button>
                 </div>
 
-                <div style={{ fontSize: 12, color: " red" }}>{error}</div>
-
                 <div>
                   <button onClick={(event) => setOpen(false)}>Close</button>
+                </div>
+
+                <div style={{ fontSize: 12, color: " red" }}>
+                  <strong>{error}</strong>
                 </div>
               </div>
             </form>
