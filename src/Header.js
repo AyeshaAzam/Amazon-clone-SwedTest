@@ -77,7 +77,7 @@ function Header() {
     setOpen(true);
   };
 
-  //https://www.youtube.com/watch?v=FM2RN8rHCTE
+
   const handleValidation = () => {
     let error = "";
 
